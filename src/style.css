@@ -1,14 +1,14 @@
 body {
-
     margin: 0;
     padding: 0;
     overflow: hidden;
     font-family: Helvetica, sans-serif;
     text-transform: uppercase;
     color: white;
-  }
-  
-  .text {
+    background-color: #151515;
+}
+
+.text {
     position: fixed;
     top: 0;
     left: 0;
@@ -16,24 +16,24 @@ body {
     z-index: 90001;
     font-size: 25vh;
     line-height: 0.8;
-    
     pointer-events: none;
     /* z-index: 999; */
-    /* mix-blend-mode: difference; */
-  }
-  
-  span {
+    mix-blend-mode: difference;
+}
+
+span {
     display: block;
     /* mix-blend-mode: difference; */
-  }
-  
-  #fullscreen {
+}
+
+#fullscreen {
     position: fixed;
     right: 0;
     top: 0;
     padding: 2vw;
     cursor: pointer;
-  }
+}
+
 .canvas {
     position: fixed;
     right: 0;
@@ -45,6 +45,7 @@ body {
     /* mix-blend-mode: difference; */
 }
 
+
 /* body {
   background-color: black;
   margin: 0;
@@ -52,6 +53,7 @@ body {
   overflow: hidden;
   font-family: Arial, sans-serif;
 } */
+
 
 /* #text-overlay {
   position: absolute;
@@ -61,6 +63,7 @@ body {
   z-index: 1;
 } */
 
+
 /* #text-overlay h1 {
   font-size: 4rem;
   line-height: 1;
@@ -69,23 +72,40 @@ body {
 } */
 
 #controls {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  color: white;
-  z-index: 1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+    z-index: 1;
 }
 
 #time {
-  margin-right: 10px;
-  font-size: 1.2rem;
+    margin-right: 10px;
+    font-size: 3rem;
 }
 
 #play-pause {
-  background: transparent;
-  border: 2px solid white;
-  color: white;
-  padding: 5px 10px;
-  font-size: 1rem;
-  cursor: pointer;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 1rem 5rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .text {
+        font-size: 4.75rem;
+        line-height: 130%;
+    }
+    span {
+        transform: scaleY(1.5);
+    }
+    #time {
+        font-size: 2rem;
+    }
+    #play-pause {
+        padding: 0.75rem 3rem;
+        font-size: 1rem;
+    }
 }
